@@ -17,6 +17,7 @@ pipeline{
 			archiveArtifacts artifacts: 'output/**'
 			sh "docker-compose down"
 		}
-		
 	}	
 }
+
+
