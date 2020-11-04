@@ -11,9 +11,11 @@ pipeline{
 				sh "docker-compose up searchPageTest bookflightTest"
 			}
 		}
-		stage("Bring down Grid"){
-			steps{
-				sh "docker-compose down"
+	}
+	post{
+		always{
+			archiveArtifacts artifacts: 'output/**'
+			sh "docker-compose down"
 			}
 		}
 	}
