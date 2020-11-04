@@ -32,7 +32,7 @@ services:
       - MODULE=SearchPage.xml
       - BROWSER=firefox
     volumes:
-      - ./searchPageTestsResult:/usr/share/Project3/test-output
+      - ./output/searchPageTestsResult:/usr/share/Project3/test-output
   bookflightTest:
     image: automationtesting99/selenium-grid-docker
     depends_on:
@@ -43,4 +43,4 @@ services:
       - MODULE=Book_Flight.xml
       - BROWSER=chrome
     volumes:
-      - ./bookFlightTestsResult:/usr/share/Project3/test-output
+      - ./output/bookFlightTestsResult:/usr/share/Project3/test-output
